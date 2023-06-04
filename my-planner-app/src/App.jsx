@@ -31,7 +31,7 @@ export default App
 
 function Container({children}){
   return (
-    <div className='flex flex-row flex-auto min-w-500'>
+    <div className='flex flex-row flex-auto h-1/2'>
       {children}
     </div>
   );
