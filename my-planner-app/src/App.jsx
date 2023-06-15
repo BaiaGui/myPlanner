@@ -17,7 +17,6 @@ function App() {
         <DayContainer day="Anotações" color="bg-fuchsia-200" btnColor="bg-fuchsia-400"/>
 
       </Container>
-      
 
     
     </div>
