@@ -17,21 +17,26 @@ function App() {
 export default App
 
 
-
-
-function Container({children}){
-  return (
-    <div className='flex flex-row flex-auto h-1/2'>
-      {children}
-    </div>
-  );
-}
+//---------------------------------------
 
 function AppPage(){
+  const days=["Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado", "Domingo", "Anotações"];
+  let dayComponentArray = days.map(day =><DayContainer key={crypto.randomUUID()} day={day} color={"bg-slate-700"} btnColor={"bg-slate-500"}/>)
+
+  let arr1 = dayComponentArray.slice(0,4);
+  let arr2 = dayComponentArray.slice(4, 8);
+
+
   return(
 
-    <div className="w-screen h-screen flex flex-col flex-wrap">
-    <Container>
+    <div className="w-screen h-screen flex flex-wrap">
+      <Container>
+        {arr1}
+      </Container>
+      <Container>
+        {arr2}
+      </Container>
+    {/* <Container>
       <DayContainer day="Segunda" color="bg-red-200" btnColor="bg-red-400"/>
       <DayContainer day="Terça"  color="bg-yellow-200" btnColor="bg-yellow-400"/>
       <DayContainer day="Quarta" color="bg-teal-200" btnColor="bg-teal-400"/>
@@ -43,7 +48,21 @@ function AppPage(){
       <DayContainer day="Domingo" color="bg-orange-200" btnColor="bg-orange-400"/>
       <DayContainer day="Anotações" color="bg-fuchsia-200" btnColor="bg-fuchsia-400"/>
 
-    </Container>
+    </Container> */}
     </div>
   );
 }
+
+
+
+
+
+
+function Container({children}){
+  return (
+    <div className='flex flex-row flex-auto h-1/2 w-screen'>
+      {children}
+    </div>
+  );
+}
+

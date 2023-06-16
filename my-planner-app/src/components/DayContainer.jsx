@@ -28,8 +28,8 @@ export default function DayContainer({day, color, btnColor}){
     return (
         <>
         <div className={`${color} h-full flex-1 flex flex-col items-center p-3`}>
-            <p className="text-xl">{day.toUpperCase()}</p>
-            <div className="bg-amber-50 w-full h-full rounded-md divide-y divide-amber-950 overflow-y-auto max-h-full">
+            <p className="text-xl text-white font-bold p-2">{day.toUpperCase()}</p>
+            <div className="bg-amber-100 w-full h-full rounded-md divide-y divide-amber-950 overflow-y-auto max-h-full">
                 {notesArray}
                 {editMode && <input type="text" autoFocus={true} placeholder="Nova Nota" className="w-full p-3 rounded-md" onChange={handleChance}/> }
             </div>
